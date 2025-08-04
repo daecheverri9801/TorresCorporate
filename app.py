@@ -31,7 +31,7 @@ KMZ_FILES     = [os.path.join(DATA_DIR, f) for f in os.listdir(DATA_DIR)
 # ------------------ Selección / introducción API KEY -------------
 api_key = st.text_input(
     "🔑 Google Maps Geocoding API key",
-    value=os.getenv("GOOGLE_MAPS_API_KEY", "AIzaSyCkZG7fbor17mhs3NLjaThcChO-Pav67gA"),
+    value=os.getenv("GOOGLE_MAPS_API_KEY", ""),
     type="password",
     help="Se puede dejar vacío si la variable de entorno GOOGLE_MAPS_API_KEY ya está definida"
 )
