@@ -11,15 +11,15 @@ import streamlit as st
 warnings.filterwarnings("ignore", category=UserWarning)
 
 # ---------------------- Configuración Streamlit ------------------
-st.set_page_config(page_title="Geocodificar Direcciones",
+st.set_page_config(page_title="Geocodificar Direcciones Torres Corporate",
                    page_icon="🌎",
                    layout="wide")
 
 st.title("🌎 Geocodificar direcciones y asignar zonas")
 st.write("""
-1. **Sube** tu Excel con las columnas de dirección  
+1. **Sube** el Excel  
 2. **Procesa** (se usará la caché para no gastar cuota)  
-3. **Descarga** el Excel enriquecido
+3. **Descarga** el Excel 
 """)
 
 # ------------------- Parámetros y archivos fijos -----------------
@@ -31,7 +31,7 @@ KMZ_FILES     = [os.path.join(DATA_DIR, f) for f in os.listdir(DATA_DIR)
 # ------------------ Selección / introducción API KEY -------------
 api_key = st.text_input(
     "🔑 Google Maps Geocoding API key",
-    value=os.getenv("GOOGLE_MAPS_API_KEY", ""),
+    value=os.getenv("GOOGLE_MAPS_API_KEY", "AIzaSyCkZG7fbor17mhs3NLjaThcChO-Pav67gA"),
     type="password",
     help="Se puede dejar vacío si la variable de entorno GOOGLE_MAPS_API_KEY ya está definida"
 )
