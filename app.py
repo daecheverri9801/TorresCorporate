@@ -17,9 +17,9 @@ st.set_page_config(page_title="Geocodificar Direcciones Torres Corporate",
 
 st.title("🌎 Geocodificar direcciones y asignar zonas")
 st.write("""
-1. **Sube** tu Excel con las columnas de dirección  
+1. **Sube** el Archivo de Excel  
 2. **Procesa** (se usará la caché para no gastar cuota)  
-3. **Descarga** el Excel 
+3. **Descarga** el Excel geocodificado con zona y subzona
 """)
 
 # ------------------- Parámetros y archivos fijos -----------------
