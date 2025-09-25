@@ -1,5 +1,5 @@
 streamlit==1.35.0
-pandas>=2.1
+pandas==2.2.2
 geopandas==0.14.4
 shapely==2.0.4
 googlemaps==4.10.0
