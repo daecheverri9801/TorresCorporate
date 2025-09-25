@@ -1,0 +1,3 @@
+libproj-dev
+proj-bin
+libgeos-dev
