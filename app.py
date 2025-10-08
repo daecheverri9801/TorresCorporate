@@ -468,9 +468,9 @@ def crear_preclasificacion(df_geo) -> io.BytesIO:
         for r in range(4, last_row + 1):
             ws_reg[f"C{r}"] = f'=IFERROR(VLOOKUP($B{r},Base!$B:$C,2,FALSE),"")'
         ws_reg["A1"] = f'=COUNTA(B4:B{last_row})'
-        ws_reg["B1"] = f'=IFERROR(LOOKUP(2,1/(B4:B{last_row}<>""),C4:C{last_row}),"")'
-        ws_reg["C1"] = f'=IFERROR(LOOKUP(2,1/(B4:B{last_row + 5}<>""),B4:B{last_row + 5}),"")'
-
+        ws_reg["B1"] = (f'=IFERROR(INDEX(B4:B{last_row}; 'f'MAX(FILTER(ROW(B4:B{last_row})-ROW(B4)+1; B4:B{last_row}<> ""))); "")')
+        ws_reg["C1"] = (f'=IFERROR(INDEX(C4:C{last_row}; 'f'MAX(FILTER(ROW(B4:B{last_row})-ROW(B4)+1; B4:B{last_row}<> ""))); "")')
+        
         # --- Estilo cabecera de datos (fila 3) ---
         header_fill = PatternFill("solid", fgColor="005BEA")
         header_font = Font(color="FFFFFF", bold=True)
